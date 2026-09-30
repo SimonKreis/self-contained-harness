@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use or cite this work, please cite it as below."
+type: report
+title: "The Self-Contained Harness: One Theme, One Folder, One Agent-Maintained Data System"
+authors:
+  - family-names: Kreis
+    given-names: Simon
+version: "0.1"
+date-released: 2026-09-29
+url: "https://github.com/SimonKreis/self-contained-harness"
+repository-code: "https://github.com/SimonKreis/self-contained-harness"
+license: CC-BY-4.0
+abstract: >-
+  A framework manuscript on managing personal and professional context with
+  AI agents: one self-contained folder per theme, in plain portable files,
+  where agents file, distill and prune while the human captures, decides and
+  deletes. Appendix A and the Part V templates are dedicated to the public
+  domain under CC0 1.0.
+keywords:
+  - context engineering
+  - AI agents
+  - AGENTS.md
+  - personal knowledge management
+  - second brain
+  - local-first
