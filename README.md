@@ -1,27 +1,28 @@
 # The Self-Contained Harness
 
-*One theme, one folder, one agent-maintained data system.*
+*One theme, one note, one agent-maintained data system.*
 
 **The Self-Contained Harness** is a framework manuscript about keeping personal and
 professional context usable in the age of AI agents. It addresses two problems: the
 information explosion that generative AI has made worse (material now grows faster than
 anyone can read it, and it is scattered across notes apps, drives and chat histories),
 and the churn of AI tool choices, where every change of model, engine or subscription
-turns into a migration. Its core idea: keep **one self-contained folder per theme**, in
-plain portable files, and let agents file, distill and prune that folder while the human
-only captures, decides and deletes.
+turns into a migration. Its core idea: keep **one living note per theme**, with one flat folder
+of static documents beside it, in plain portable files, and let agents file, distill and
+prune while the human only captures, decides and deletes.
 
-> **Status: v0.2 draft, work in progress, feedback welcome.**
+> **Status: v0.3 draft, work in progress, feedback welcome.**
 > This is a complete draft, not a finished work. Sections will change, and the dated
 > parts (Part IV and section 3.7) are meant to be revised as tools and benchmarks move.
 
 > **Thesis.** Agentic AI is both the cause of the information explosion and,
-> paradoxically, its cure: one self-contained folder per theme, where agents distill,
-> prune and compound context in portable formats that outlive any tool.
+> paradoxically, its cure: one living note per theme, where agents distill, prune and
+> compound a context that both you and they can rely on, in portable formats that
+> outlive any tool.
 
 **Read it:** [the-self-contained-harness.md](the-self-contained-harness.md).
 
-By Simon Kreis. Version 0.2, draft, October 2026.
+By Simon Kreis. Version 0.3, draft, October 2026.
 
 ---
 
@@ -35,11 +36,13 @@ and works worse when handed too much. The person pays in attention: open loops, 
 reconstruction. One complete, current, distilled description of each piece of work, in one
 place, answers both.
 
-**The unit.** *One theme = one folder = one agentic project = one self-contained data
-system.* A theme is anything you think about as a whole: a career, your health, a
-manuscript, a codebase. "Self-contained" means self-contained per **domain**, not per
-**capability**: everything that belongs to a theme lives in its folder, and what is common
-to all themes lives once, in a thin root layer.
+**The unit.** *One theme = one living note = one agentic project = one self-contained
+data system.* A theme is anything you think about as a whole: a career, your health, a
+manuscript, a trip. It has two homes joined by one short name: a **note** that holds
+everything alive (actions, context, ideas, incoming drafts) and a flat **asset folder** that
+holds everything static. One note per project, never two. "Self-contained" means
+self-contained per **domain**, not per **capability**: what is common to all themes lives
+once, at the root.
 
 **Your real harness is the folder.** The program that runs a model is an interchangeable
 *engine*; the part worth designing is the folder, with its entry file, map, rules, skills
@@ -51,12 +54,13 @@ the system. The division of labour is deliberately lopsided: **the human does th
 things: capture, decide, delete.** Filing, merging, summarizing, linking and tidying belong
 to the agent.
 
-**Pruning as a first-class operation.** Text is cut, not copied: source text moves word for
-word into the theme's `TRASH.md` before it is distilled, and processed files leave for
-`2-trash/` with a manifest line saying where their content now lives. The agent never
-deletes; the human empties the trash. Losses are checked by **sampling**, not by rereading
-everything: a fresh agent verifies the essence of a random tenth. Two properties make the
-result checkable:
+**Pruning as a first-class operation.** Text is cut, not copied: whatever the human wrote
+leaves a note only after a script has found it, word for word, in one `trash.md` for the
+whole root. Files leave whole for the trash; the agent deletes only proven duplicates, and
+the human empties the trash. **Verify, do not journal**: no manifests, no run logs, but a
+check before every removal and a counter-check before any backup is deleted. Large or
+sensitive distillations are reviewed by a fresh agent, by sampling when they are very
+large. Two properties make the result checkable:
 **traceability** (every source can be followed to its destination) and **convergence**
 (running the same pass twice produces nothing the second time).
 
@@ -67,29 +71,26 @@ change rather than a migration.
 **A third generation of the second brain.** The method is offered as a contribution to the
 lineage of *Getting Things Done*, PARA and *Building a Second Brain*, not a break with it:
 every earlier idea survives, and what changes is who carries it out. From PARA it keeps
-filing by actionability, but **status belongs to the theme folder, never to the file**:
-whole themes move between tiers, files never do, and the method declutters instead of
-accumulating.
+filing by actionability, but **status is a property of the note, never a place**: folders
+are phases (inbox, project, archive, trash), a file moves only when its nature changes,
+never when its priority does, and the method declutters instead of accumulating.
 
 **Architecture (Part III).**
 
-- *The root layer*: `AGENTS.md`, `CONTEXT.md` (the system), `USER.md` (the person), the
-  shared skills, and numbered tiers (`0-system`, `1-inbox`, `2-active`, `3-backlog`,
-  `4-areas`, `5-archive`, `9-trash`); a theme's tier is its status.
-- *The theme folder*: four files (`AGENTS.md`, `CONTEXT.md` for what is true, `TODO.md` for
-  what is open, `TRASH.md` for source text cut verbatim) and three standard folders
-  (`0-assets/`, `1-ai-workspace/`, `2-trash/<run>/`); the theme's top level is its inbox.
-  Classification happens in sections, not in folders.
-- *The placement rule*: behaviour goes in `AGENTS.md`, the person in `USER.md`, the system in
-  the root `CONTEXT.md`, domain knowledge in the theme's `CONTEXT.md` and `TODO.md`,
-  procedures in skills.
-- *Anatomy of `CONTEXT.md`*: **addressability over file count**; one anchored file per
-  theme (`## §core`, `§map`, `§protocol`, content sections, `§decisions`, `§log`),
-  with reliability markers and per-section sensitivity.
+- *The root layer*: one `AGENTS.md`, `USER.md` (the person), every skill in
+  `.agents/skills/`, the human's own `0-dashboard/` and `1-inbox/` (out of the agents'
+  reach), `2-projects/` (one note per project), `3-assets/` (one flat folder per project),
+  `8-archives/` and `9-trash/`.
+- *The project note*: four sections (Actions, Context, Ideas, Incoming, always last) and a
+  `status:` in its front matter; one living Markdown file over a body of static material,
+  kept readable (about 40 KB) by moving stable blocks to the assets.
+- *Reading a note in slices*: **addressability over file count**, with visible statuses
+  (the human's decision, a hypothesis, an assistant's suggestion) and orientations rather
+  than rules.
 - *Permissions and guarantees*: a short table of agent rights, and a ladder of guarantees
   from soft to hard (relay, inline, injection, mechanism). **Engine memory is a cache.**
-- *Maintenance without drift*: one `declutter` pass (protect, survey, structure, integrate,
-  consolidate, verify by sampling, close on request), with the mechanical checks left to a
+- *Maintenance without drift*: one `declutter` skill whose routine is to empty a note's
+  Incoming section into Actions, Context and Ideas, with the mechanical checks left to a
   small script.
 - *Privacy by design*: the read perimeter, what zero data retention does and does not
   cover, stored copies as the long-term risk, encryption at rest for sensitive themes.
@@ -103,12 +104,12 @@ work, access and data retention, prompt caching, and the triggers for updating t
 framework.
 
 **Quick start (Part V) and Appendix A.** A root `AGENTS.md`, one bootstrap prompt, one skill
-(`declutter`) for the whole workflow, five trigger prompts, and a one-page `CONTEXT.md`
-specification, with its companion `TODO.md`, and a fictional example.
+(`declutter`) for the whole workflow, six trigger prompts, and a one-page project note
+specification with a fictional example.
 
 **Related approaches and limits.** Section 2.10 situates the method against entry-file
 conventions, built-in assistant memories, memory servers, retrieval over embeddings and
-context engineering, and says where the single-file model stops. A closing section lists
+context engineering, and says where the single-note model stops. A closing section lists
 what is not yet known.
 
 ---
@@ -160,15 +161,15 @@ See `LICENSE` and `LICENSE-CC0`.
 ```bibtex
 @misc{kreis2026harness,
   author       = {Kreis, Simon},
-  title        = {The Self-Contained Harness: One Theme, One Folder, One Agent-Maintained Data System},
+  title        = {The Self-Contained Harness: One Theme, One Note, One Agent-Maintained Data System},
   year         = {2026},
-  note         = {Version 0.2, draft, work in progress},
+  note         = {Version 0.3, draft, work in progress},
   howpublished = {\url{https://github.com/SimonKreis/self-contained-harness}}
 }
 ```
 
-Plain text: Kreis, S. (2026). *The Self-Contained Harness: One theme, one folder,
-one agent-maintained data system* (Version 0.2, draft).
+Plain text: Kreis, S. (2026). *The Self-Contained Harness: One theme, one note,
+one agent-maintained data system* (Version 0.3, draft).
 <https://github.com/SimonKreis/self-contained-harness>
 
 GitHub also offers a "Cite this repository" button, generated from `CITATION.cff`.
