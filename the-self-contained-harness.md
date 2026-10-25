@@ -793,10 +793,12 @@ root/
 ├── .agents/skills/    every skill, starting with declutter (5.3)
 ├── 0-dashboard/       the human's: lists, links, priorities; agents never touch it
 ├── 1-inbox/           the human's: raw drops; agents never touch it
-├── 2-projects/        theme folders, grouped as the human likes (an example)
+├── 2-projects/        themes under way, grouped as the human likes (an example)
 │   └── renovation/
 │       ├── renovation.md   the living note
 │       └── files/          resources: documents, data, texts kept as they are
+├── 3-areas/           themes kept up for good: health, money, career (an example)
+├── 4-backlog/         themes waiting their turn (an example)
 ├── 8-archives/        themes at rest, same shape (an example)
 └── 9-trash/           trash.md, temporary backups, files awaiting deletion
 ```
@@ -809,8 +811,9 @@ Five rules make it work.
   client handle.
 - **Status is a property; the arrangement is the human's.** The `status:` line
   of a note says whether the theme is active, an area or archived (2.2). The
-  folders that group themes (here `2-projects/` and `8-archives/`; a backlog, a
-  folder per area of life, or none at all would do as well) are the human's to
+  folders that group themes (here `2-projects/`, `3-areas/`, `4-backlog/` and
+  `8-archives/`, which is how the author's own drive is arranged; a folder per
+  area of life, or none at all, would do as well) are the human's to
   create, rename and regroup. Nothing an agent needs about a theme is encoded
   in a path: only the root folders listed here have set names; it finds a note
   by its name and its status line, and every rule and skill names themes, not
@@ -1130,7 +1133,7 @@ The resulting policy fits in one line per level: most themes, plain text and
 any provider; sensitive themes, an encrypted vault and a zero-retention
 provider or a local model; credentials, never in the tree at all.
 
-### 3.7 Stack archetypes: pick some, leave some (September 2026)
+### 3.7 Stack archetypes: pick some, leave some (October 2026)
 
 Nothing in this section is required. Each tool is here because it embodies one
 of the principles above (plain files, portability, lean context,
@@ -1178,11 +1181,13 @@ criteria follow from the architecture of this part: the engine reads
 `AGENTS.md` and project-level `.agents/skills/`; its self-improvement, if any,
 lands in files you can review; its default context is lean; it can be used
 without a terminal, if you need that; and its cost per task, as far as it has
-been measured (so far mainly in one vendor-run comparison), is reasonable. In
-September 2026, Hermes meets most of them for a reader starting out: it confines self-improvement to skills, the one layer this
-framework already treats as plain, reviewable files, and it runs as a desktop
-application. Pi suits those who want the leanest possible engine and are
-willing to let it rewrite its own harness. DeepSeek Harness is the architecture
+been measured (so far mainly in one vendor-run comparison), is reasonable. Pi
+is the engine this document recommends (Part IV): the leanest of the three, it
+meets every criterion but the last one about terminals, and the
+self-modification it allows can be reviewed, or simply left unused. Hermes
+meets most of them too, and suits a reader who wants a desktop application and
+self-improvement confined to skills, the one layer this framework already
+treats as plain, reviewable files. DeepSeek Harness is the architecture
 to watch, the modular idea taken to its limit. Any engine that meets the first
 two criteria will do; the folder does not depend on the choice.
 
@@ -1200,12 +1205,46 @@ two criteria will do; the folder does not depend on the choice.
 
 ---
 
-## Part IV. Staying current without going mad (dated September 2026)
+## Part IV. Staying current without going mad (dated October 2026)
 
 The field moves too fast for recommendations to last. What lasts is a way of
 deciding. This part sets out that way of deciding, illustrated with the tools
-and benchmarks of September 2026; the illustrations will age, the reasoning
-should not.
+and benchmarks of September and October 2026; the illustrations will age, the
+reasoning should not.
+
+**Recommendations, October 2026.** The reasoning below leads to five choices.
+Each follows from the principle of the folder itself: plain files, a lean
+context, nothing that ties you to one vendor.
+
+- **Obsidian, as the human's window.** It reads and edits plain Markdown on
+  your own disk, with links, search and a graph: the same philosophy as the
+  harness, local and portable. The harness is the model's interface to your
+  themes; Obsidian is yours, the place where you look, browse and search, as
+  `grep` is for the machine (3.7).
+- **Pi, as the engine.** Four tools and a very short system prompt: the
+  principle of this document applied to the engine itself. The benchmarks
+  agree that leanness and efficiency go together, because every token of
+  harness is context the model must carry on every turn. Pi was competitive on
+  cost and success rate in the HarnessTax study, where a heavy engine's initial
+  context averaged more than ten times its own, and it was the fastest and the
+  most token-efficient in Composio's comparison (3.7). Hermes is the
+  alternative for a reader who wants a desktop application rather than a
+  terminal.
+- **A subscription, while it lasts.** Consumer plans appear to be subsidized
+  in the race for market share, so for heavy daily use they cost less than
+  paying per token. That is a consequence of today's economics, not a law:
+  prefer a plan you can use in the engine of your choice, and be ready to move
+  to per-token access when the subsidy ends (4.3).
+- **Caching before list price.** In agentic work the input dominates the
+  bill, because every turn re-sends the entry file, the note and the
+  conversation. A provider that bills cache reads at a tenth of the input
+  price, as Anthropic and DeepSeek do, can cost half as much as one with the
+  same list price (4.4). Keep one model per pass, so that the cache stays warm.
+- **Two valid ways to pick the model.** The newest frontier model at its
+  lowest reasoning setting, or a cheaper model on the cost-per-task frontier:
+  the two are often nearly tied, and which one wins depends on the task and on
+  the month's prices. Read the frontier, not the top of the leaderboard (4.1,
+  4.2); the companion essay [*Choosing AI Models for Knowledge Work*](https://github.com/SimonKreis/choosing-ai-models) sets out the method.
 
 ### 4.1 Principles
 
@@ -1241,11 +1280,14 @@ it:
 
 Match the weight to the task, and do not pay for machinery you are not using.
 
-**The model rule of thumb: the latest frontier model at low effort.** As a
-default, take the newest frontier model and run it at its lowest reasoning
-setting; raise the effort only when a task fails. In general, that beats an
-older or a near-frontier model pushed to its maximum setting. Two axes explain
-why:
+**Two rules of thumb for the model, nearly tied.** The first: take the newest
+frontier model and run it at its lowest reasoning setting, raising the effort
+only when a task fails. In general, that beats an older or a near-frontier
+model pushed to its maximum setting. The second: for long execution, take a
+cheaper model that sits on the cost-per-task frontier. The two routes often sit
+side by side on that frontier, and which one wins depends on the task and on
+the month's prices; the companion essay [*Choosing AI Models for Knowledge Work*](https://github.com/SimonKreis/choosing-ai-models) sets out how to tell.
+Two axes explain why the first holds as often as it does:
 
 - **Recency.** A new generation usually improves on the previous one across the
   board, while extra reasoning effort buys a few points within the same model:
@@ -1290,6 +1332,11 @@ Three habits make these numbers useful:
 3. **Compare within one snapshot.** Indexes are revised and rescaled; a score
    is only comparable with scores from the same version of the same
    leaderboard.
+
+The companion essay goes further: it splits the choice between a thinking
+partner and an executor, adds AA-PersonalityBench for the first and
+AutomationBench-AA as a risk filter for the second, and gives a system prompt
+that narrows the gap for cheaper models.
 
 ### 4.3 Access: subscriptions, routers and data retention
 
