@@ -23,7 +23,9 @@ agents distill, recycle and prune what is captured in them.
 
 **Read it:** [the-self-contained-harness.md](the-self-contained-harness.md).
 
-By Simon Kreis. Version 0.4, draft, October 2026.
+**Simon Kreis & Claude.** Made with AI, mainly Claude (Anthropic), which contributed in part or in whole to the work. Simon Kreis is responsible for the result. From an original idea by Simon Kreis.
+
+Version 0.4, draft, October 2026.
 
 ---
 
@@ -166,15 +168,15 @@ See `LICENSE` and `LICENSE-CC0`.
 
 ```bibtex
 @misc{kreis2026harness,
-  author       = {Kreis, Simon},
+  author       = {Kreis, Simon and Claude},
   title        = {The Self-Contained Harness: One Theme, One Folder, One Living Note},
   year         = {2026},
-  note         = {Version 0.4, draft, work in progress},
+  note         = {Version 0.4, draft, work in progress. Made with AI, mainly Claude (Anthropic)},
   howpublished = {\url{https://github.com/SimonKreis/self-contained-harness}}
 }
 ```
 
-Plain text: Kreis, S. (2026). *The Self-Contained Harness: One theme, one folder,
+Plain text: Kreis, S., & Claude (2026). *The Self-Contained Harness: One theme, one folder,
 one living note* (Version 0.4, draft).
 <https://github.com/SimonKreis/self-contained-harness>
 

@@ -2,7 +2,11 @@
 
 *One theme, one folder, one living note.*
 
-Simon Kreis · Version 0.4, draft, October 2026.
+Simon Kreis & Claude
+
+Made with AI, mainly Claude (Anthropic), which contributed in part or in whole to the work. Simon Kreis is responsible for the result. From an original idea by Simon Kreis.
+
+Version 0.4, draft, October 2026.
 
 > **Thesis.** Agentic AI is both the cause of the information explosion and,
 > paradoxically, its cure: one self-contained folder per theme around one
