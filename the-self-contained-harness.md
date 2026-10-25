@@ -1405,8 +1405,7 @@ revised when one of these triggers occurs:
 - an engine changes how it discovers `AGENTS.md` or skills;
 - a better benchmark for long-horizon knowledge work appears.
 
-Each revision updates the date in the section title and adds a line to the
-changelog.
+Each revision updates the date in the section title.
 
 [^aaindex]: Artificial Analysis, "Artificial Analysis Intelligence Index" (v4.3.2, accessed 2026-09-29). <https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index>
 [^briefcase]: Artificial Analysis, "Announcing AA-Briefcase: a frontier knowledge work evaluation" (2026-06-18). <https://artificialanalysis.ai/articles/aa-briefcase>
