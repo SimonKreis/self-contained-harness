@@ -12,7 +12,7 @@ one living note, in plain portable files. The person arranges the folders as the
 agents distill, recycle and prune what is captured in them.
 **The structure is personal; the distillation is not.**
 
-> **Status: v0.4 draft, work in progress, feedback welcome.**
+> **Status: draft, work in progress, feedback welcome.**
 > This is a complete draft, not a finished work. Sections will change, and the dated
 > parts (Part IV and section 3.7) are meant to be revised as tools and benchmarks move.
 
@@ -25,7 +25,7 @@ agents distill, recycle and prune what is captured in them.
 
 **Simon Kreis & Claude.** Made with AI, mainly Claude (Anthropic), which contributed in part or in whole to the work. Simon Kreis is responsible for the result. From an original idea by Simon Kreis.
 
-Version 0.4, draft, October 2026.
+Draft, updated October 2026.
 
 ---
 
@@ -77,7 +77,8 @@ into its context, and everything is an ordinary file, so changing tools becomes 
 change rather than a migration.
 
 **A third generation of the second brain.** The method is offered as a contribution to the
-lineage of *Getting Things Done*, PARA and *Building a Second Brain*, not a break with it:
+lineage of David Allen's *Getting Things Done* and Tiago Forte's *Building a Second Brain*, with
+its PARA structure (Projects, Areas, Resources, Archives), not a break with it:
 every earlier idea survives, and what changes is who carries it out. From PARA it keeps
 filing by actionability, but **status is a property of the note, never a place**
 (active, area, archived): where a theme folder sits is the person's choice, nothing an
@@ -171,13 +172,13 @@ See `LICENSE` and `LICENSE-CC0`.
   author       = {Kreis, Simon and Claude},
   title        = {The Self-Contained Harness: One Theme, One Folder, One Living Note},
   year         = {2026},
-  note         = {Version 0.4, draft, work in progress. Made with AI, mainly Claude (Anthropic)},
+  note         = {Draft, work in progress. Made with AI, mainly Claude (Anthropic)},
   howpublished = {\url{https://github.com/SimonKreis/self-contained-harness}}
 }
 ```
 
 Plain text: Kreis, S., & Claude (2026). *The Self-Contained Harness: One theme, one folder,
-one living note* (Version 0.4, draft).
+one living note* (draft).
 <https://github.com/SimonKreis/self-contained-harness>
 
 GitHub also offers a "Cite this repository" button, generated from `CITATION.cff`.

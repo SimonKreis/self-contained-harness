@@ -6,8 +6,8 @@ authors:
   - family-names: Kreis
     given-names: Simon
     email: simon@kreisconsulting.ca
-version: "0.4"
-date-released: 2026-10-15
+  - name: Claude (Anthropic)
+date-released: 2026-10-25
 url: "https://github.com/SimonKreis/self-contained-harness"
 repository-code: "https://github.com/SimonKreis/self-contained-harness"
 license: CC-BY-4.0

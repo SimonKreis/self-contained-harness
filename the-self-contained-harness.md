@@ -6,7 +6,7 @@ Simon Kreis & Claude
 
 Made with AI, mainly Claude (Anthropic), which contributed in part or in whole to the work. Simon Kreis is responsible for the result. From an original idea by Simon Kreis.
 
-Version 0.4, draft, October 2026.
+Draft, updated October 2026.
 
 > **Thesis.** Agentic AI is both the cause of the information explosion and,
 > paradoxically, its cure: one self-contained folder per theme around one
@@ -195,7 +195,7 @@ them by association[^bush]. Niklas Luhmann ran a scholarly career on a
 Zettelkasten of tens of thousands of linked index cards. The last twenty years
 turned those ideas into products and methods. Evernote promised to remember
 everything; Notion and Roam turned notes into databases and graphs; Obsidian
-put linked notes back into plain local files. On the method side, *Getting
+put linked notes back into plain local files. On the method side, David Allen's *Getting
 Things Done* (2001) taught capture and the weekly review; Tim Ferriss's
 "low-information diet" (2007) and Cal Newport's *Digital Minimalism* (2019)
 argued for consuming less; Tiago Forte's *Building a Second Brain*
@@ -312,32 +312,31 @@ and nowhere else. What is common to all themes (who you are, the rules every
 agent follows, shared procedures) lives once, at the root, and is never copied
 into the themes.
 
-Readers who use PARA will recognize the shape, and the correction it makes.
-PARA sorts material by actionability: Projects, Areas, Resources, Archives. The
+Readers who use PARA, the structure Tiago Forte sets out in *Building a Second
+Brain* (1.5), will recognize the shape, and the correction it makes. PARA sorts material by actionability: Projects, Areas, Resources, Archives. The
 idea is sound; its granularity is the problem. In PARA the unit that moves is
 the individual note or file: a note travels from a project to a resource, then
 to the archive, and every change of status is one more filing decision, made
 item by item, forever. That is exactly the work that stops scaling once
 machines produce the input (1.5).
 
-Version 0.2 of this document corrected PARA by moving status up one level, to
-the theme folder: a theme changed tier by moving whole. A real run showed the
-cost of that too. A folder whose path encodes its status breaks every link and
+The obvious correction moves status up one level, to the theme folder: a theme
+changes tier by moving whole. A real run showed the cost of that too. A folder whose path encodes its status breaks every link and
 every agent instruction that points to it whenever the status changes, which
 is PARA's own cost, one level up; and status changes often (a project pauses,
 resumes, turns into an area) while its nature rarely does. Two backlog tiers
 that had drifted apart, with near-identical projects filed in both, were the
 visible symptom: status kept asking for new places.
 
-Version 0.3 took status out of the path altogether, and paid for it in the
-other direction. Each theme became two places, a note in a folder of notes and
+The opposite correction takes status out of the path altogether, and pays for
+it in the other direction. Each theme became two places, a note in a folder of notes and
 an asset folder elsewhere, held together by a shared name. Links survived
 every change of status, but the unit was gone: a theme could no longer be
 moved, handed over or encrypted in one piece, and long texts began to leave
 their note for the asset folder, scattering the context the note was meant to
 hold.
 
-This version keeps what each step got right. **Status is a property, never a
+The harness keeps what each correction got right. **Status is a property, never a
 place.** Each note carries its status in its front matter (`status: active`
 for a project under way, `area` for a responsibility in maintenance,
 `archived` for a theme at rest; add `backlog` or `paused` if you need them),
@@ -346,7 +345,7 @@ it. **The theme is one folder again**, and it moves whole. **Where it sits is
 the human's choice.** A person may group theme folders by phase, by area of
 life or not at all, and regroup them next month. Moving a folder when its
 status changes is then a choice, not an obligation, and it breaks nothing: the
-cost that version 0.2 paid came from making the path authoritative. Nothing an
+cost of the first correction came from making the path authoritative. Nothing an
 agent needs about a theme is encoded in a path: only a few fixed root folders
 (the human's space, the trash, the skills) have set names; agents find a note
 by its name and its status line, and rules and skills refer to themes by name.
@@ -359,9 +358,8 @@ to the archive only if something in it must really be kept, and otherwise
 leaves through the trash, on the human's word. **The method declutters instead
 of accumulating.**
 
-What changed between versions 0.3 and 0.4 is less a layout than a division of
-labour. Version 0.3 gave the agent placement rules and the right to move files
-by them. In the author's own use, the person kept rearranging the tree by
+What settled the question was less a layout than a division of labour. Giving
+the agent placement rules and the right to move files by them did not hold. In the author's own use, the person kept rearranging the tree by
 hand, faster than any written rule could follow, and the agent that helped was
 the one that followed: it found the notes where they now were, distilled what
 had been pasted along the way and removed the duplicates. **The structure is
@@ -482,7 +480,7 @@ between what is personal and what is not. **The human does four things:
 capture, arrange, decide, delete. The agent does the rest: distill, recycle,
 deduplicate, verify, and keep itself up to date.**
 
-*Arrange* is the part this version adds. How a person cuts a life into themes,
+*Arrange* is the part that belongs to the human. How a person cuts a life into themes,
 which themes sit together and which apart, when a theme deserves a folder of
 its own: that is a map of how one person thinks. No method can draw it for
 them, and an agent that tries produces a tidy tree its owner no longer finds
@@ -548,10 +546,10 @@ digital hoarder's difficulty is less a lack of discipline than the reasonable
 fear of losing something that matters. A trash that holds every removed word,
 under the project it came from, answers most of that fear.
 
-**Verify, do not journal.** Version 0.2 kept a manifest line for every file
-that left and a journal for every pass. Both grew without limit and were
-rarely read: a log that accumulates is one more pile. This version keeps no
-history of its own work. `trash.md` grows too, but it is a store, not a record
+**Verify, do not journal.** A manifest line for every file that leaves and a
+journal for every pass were tried. Both grew without limit and were rarely
+read: a log that accumulates is one more pile. The harness keeps no history of
+its own work. `trash.md` grows too, but it is a store, not a record
 of work: agents read it only to verify, and the human empties it. Safety comes from two checks instead. Before every
 removal, a script verifies that the text is present word for word at its
 destination. Before a backup is deleted, a counter-check asks the opposite
@@ -582,15 +580,15 @@ several independent agents found very few important ideas missing, at the cost
 of roughly half a week's allowance on a high-end subscription; the sampled
 version reached the same conclusion for a small fraction of that cost.
 Exhaustive rereading was the wrong tool for the job: it buys certainty about
-details nobody will look for. A second run moved the same drive to the layout
-of version 0.3: about fifteen projects, most of them in a single working
+details nobody will look for. A second run moved the same drive to a layout
+that kept each theme's note and its files apart: about fifteen projects, most of them in a single working
 session, migrated and distilled one at a time, with every removal checked by
 script and the largest notes reviewed by a fresh agent. In the notes it
 reviewed, that agent flagged losses on the order of one to three percent of
 unit statements; on the author's reading, none affected a decision, and all
 were repaired before any backup was deleted. These are the author's own
-counts, not an independent measurement (see the closing section). Version
-0.4 came out of what followed: the author rearranged the drive by hand, and the
+counts, not an independent measurement (see the closing section). The present
+layout came out of what followed: the author rearranged the drive by hand, and the
 agent's part shrank to finding its way in the new arrangement, distilling what
 had been pasted along the way and removing proven duplicates.
 
@@ -1691,9 +1689,8 @@ This is a draft of a method, and it should be read as one.
 
 - **Informal runs, no case study.** The method has been applied at scale by
   its author, to one personal drive: a first run of sixteen themes and about
-  2.3 million words of captured text, a migration of the same drive to the
-  layout of version 0.3, then the author's own rearrangement that led to this
-  version (2.6). Independent checks found few
+  2.3 million words of captured text, a migration of the same drive to an earlier
+  layout, then the author's own rearrangement that led to the present one (2.6). Independent checks found few
   important ideas missing in the first run and, in the notes reviewed during the
   second, losses on the order of one to three percent of statements, none of
   which, on the author's reading, affected a decision. That is a single
@@ -1702,8 +1699,8 @@ This is a draft of a method, and it should be read as one.
 - **The arrangement is personal, so it is hard to test.** Leaving the tree to
   the human (2.5) fits one person who likes to rearrange; whether it suits
   people who would rather have the agent file for them, and how an agent best
-  learns an arrangement it did not make, is not yet known. Version 0.4 is also
-  the third layout in a few weeks: the folder-per-theme shape has now been
+  learns an arrangement it did not make, is not yet known. The present layout is
+  also the third in a few weeks: the folder-per-theme shape has now been
   tried twice, the human-owned arrangement once.
 - **The evidence is borrowed.** The studies on context, scaffolding and engines
   come from coding and tool-use benchmarks. That they transfer to personal
@@ -1731,7 +1728,7 @@ the most useful input for all five.
 
 ---
 
-## Appendix A. The project note specification (v0.4)
+## Appendix A. The project note specification
 
 *`AGENTS.md` tells an agent how to work. The project note tells it what is to
 be done, what is true, what might be, and what is new.*
@@ -1837,44 +1834,3 @@ The text of this document is licensed under Creative Commons Attribution 4.0
 International (CC BY 4.0). Appendix A and the templates, prompts and skills in
 Part V are dedicated to the public domain under CC0 1.0: copy them, adapt them,
 ship them, no attribution required.
-
-## Changelog
-
-- 0.4 (October 2026): the division of labour made explicit: the human
-  captures, arranges, decides and deletes; the agent distills, recycles,
-  deduplicates, verifies and keeps itself current, and never moves anything on
-  its own (2.2, 2.5, 2.9, 3.4, 5.1, 5.3). One self-contained folder per theme
-  again, the note at its centre and `files/` for resources, so that a theme
-  moves, is handed over or is encrypted whole (2.2, 3.1, 3.6); status stays a
-  property, and where a theme folder sits is the human's choice, since agents
-  find notes by name, not by path. The note keeps as much context as it can:
-  loose context files are folded back in, and the 40 KB rule that moved blocks
-  out is dropped (3.2, Appendix A). Three status values by default (active,
-  area, archived). `declutter` loses migration and gains a catch-up step; a
-  catch-up prompt replaces the archive prompt (3.5, 5.3, 5.4). Subtitle and
-  thesis adjusted; the title stays.
-- 0.3 (October 2026): one living note per theme instead of one folder per
-  theme, after a second real run. Subtitle and thesis adjusted; the title
-  stays. Status becomes a property of the note, never a place; folders are
-  phases (inbox, project, archive, trash), and a file moves only when its
-  nature changes (2.2, 3.1). Each theme is one note with four sections
-  (Actions, Context, Ideas, Incoming) and one flat asset folder, joined by a
-  short name; the human's dashboard and inbox are out of the agents' reach;
-  one root `AGENTS.md`, no per-theme rules files (3.1, 3.2). One `trash.md`
-  for the whole root; "verify, do not journal" replaces manifests and run
-  journals; backups are temporary and counter-checked before deletion (2.6).
-  `declutter` rewritten around the Incoming section (3.5, 5.3); the
-  `CONTEXT.md` specification becomes the project note specification
-  (Appendix A); five trigger prompts become six (5.4). Parts I and IV
-  unchanged in substance (terminology updated in 1.5, 4.2 and 4.4).
-- 0.2 (October 2026): the problem framed as one problem with two victims,
-  the agent and the person, the method serving both (Part I, 1.3, 2.6);
-  pruning presented as a dial. Structure refined from a first real run. Status set per
-  theme by numbered tiers, with PARA's principle kept and its per-file
-  granularity removed (2.2, 3.1); four files per theme (`TODO.md` split from
-  `CONTEXT.md`, `TRASH.md` for source text cut verbatim) and three standard
-  folders, the theme's top level serving as its inbox (3.2); classification in
-  sections rather than folders; pruning at two granularities and verification
-  by sampling (2.6); one `declutter` skill replaces `intake` and `maintain`
-  (3.5, 5.3); `USER.md` at the root. Part IV unchanged.
-- 0.1 (September 2026): first public draft.
