@@ -1244,7 +1244,7 @@ context, nothing that ties you to one vendor.
   lowest reasoning setting, or a cheaper model on the cost-per-task frontier:
   the two are often nearly tied, and which one wins depends on the task and on
   the month's prices. Read the frontier, not the top of the leaderboard (4.1,
-  4.2); the companion essay [*Choosing AI Models for Knowledge Work*](https://github.com/SimonKreis/choosing-ai-models) sets out the method.
+  4.2); the companion essay [*A Decision Framework for AI Models*](https://github.com/SimonKreis/decision-framework-for-ai-models) sets out the method.
 
 ### 4.1 Principles
 
@@ -1286,7 +1286,7 @@ only when a task fails. In general, that beats an older or a near-frontier
 model pushed to its maximum setting. The second: for long execution, take a
 cheaper model that sits on the cost-per-task frontier. The two routes often sit
 side by side on that frontier, and which one wins depends on the task and on
-the month's prices; the companion essay [*Choosing AI Models for Knowledge Work*](https://github.com/SimonKreis/choosing-ai-models) sets out how to tell.
+the month's prices; the companion essay [*A Decision Framework for AI Models*](https://github.com/SimonKreis/decision-framework-for-ai-models) sets out how to tell.
 Two axes explain why the first holds as often as it does:
 
 - **Recency.** A new generation usually improves on the previous one across the
