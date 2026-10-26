@@ -1,5 +1,7 @@
 # The Self-Contained Harness
 
+**English** · [Français](README.fr.md)
+
 *One theme, one folder, one living note.*
 
 **The Self-Contained Harness** is a framework manuscript about keeping personal and
